@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Historique des Cotes</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#1173d4",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101922",
+            },
+            fontFamily: {
+              "display": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            font-size: 24px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark">
+<div class="relative w-full max-w-lg mx-auto flex flex-col group/design-root overflow-x-hidden">
+<div class="relative flex min-h-screen w-full flex-col bg-background-light dark:bg-background-dark" id="student-list-screen">
+<div class="sticky top-0 z-10 bg-background-light dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="flex items-center p-4 pb-2 justify-between">
+<button class="text-gray-800 dark:text-gray-200 flex size-10 shrink-0 items-center justify-center">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="text-gray-900 dark:text-gray-100 text-lg font-bold leading-tight tracking-tight flex-1 text-center">Historique des Cotes</h1>
+<div class="size-10 shrink-0"></div> 
+</div>
+</div>
+<div class="px-4 py-3">
+<label class="flex flex-col min-w-40 h-12 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-xl h-full shadow-sm">
+<div class="text-gray-500 dark:text-gray-400 flex bg-white dark:bg-background-dark items-center justify-center pl-4 rounded-l-xl border-y border-l border-gray-200 dark:border-gray-700">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-xl text-gray-900 dark:text-gray-100 focus:outline-0 focus:ring-2 focus:ring-primary/50 border-y border-r border-gray-200 dark:border-gray-700 bg-white dark:bg-background-dark h-full placeholder:text-gray-500 dark:placeholder:text-gray-400 px-4 pl-2 text-base font-normal leading-normal" placeholder="Rechercher un élève..." value=""/>
+</div>
+</label>
+</div>
+<div class="px-4 mt-2 mb-4">
+<div class="flex items-center justify-end gap-2">
+<p class="text-sm text-gray-600 dark:text-gray-400">Trier par:</p>
+<button class="flex items-center gap-1 rounded-full bg-primary/10 dark:bg-primary/20 px-3 py-1 text-sm font-medium text-primary dark:text-sky-300">
+<span>Nom</span>
+<span class="material-symbols-outlined !text-base">arrow_downward</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col space-y-1 px-2 pb-4">
+<div class="flex items-center gap-4 bg-white dark:bg-gray-800/50 rounded-lg px-4 min-h-[72px] py-2 justify-between cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+<div class="flex items-center gap-4">
+<img class="rounded-full h-12 w-12 object-cover" data-alt="Photo of Chloé Garnier" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6324GwrhM5Xkj9RgeNrup9VI3v07JFdE2FsyfAbi-ZTJKuuMDJlIcvpnCn_vxWmxA4cYaU7-U9Nf7-Y-22AdZn3uTxzjkXgZpVP8kbB894O95WUQFgWHIYwF0KkBACx-cNdMVP_BuzkhJX8ir4NGV_hlHJFotl34OdHPDqzBn1bp_cZ3pIZmeWx2AsgfVGTPFKC9liHr7xuiKBPJ4fY__hJJaLBGjcIh_Bm0Qq3p3lV04XGMqOod3LIem_zyC8OK51sOntUwfiBRt"/>
+<div class="flex flex-col justify-center">
+<p class="text-gray-900 dark:text-gray-100 text-base font-medium leading-normal line-clamp-1">Chloé Garnier</p>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal line-clamp-2">Moyenne: <span class="font-semibold text-green-600 dark:text-green-400">18/20</span></p>
+</div>
+</div>
+<div class="shrink-0">
+<div class="text-gray-400 dark:text-gray-500 flex size-7 items-center justify-center">
+<span class="material-symbols-outlined">chevron_right</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-white dark:bg-gray-800/50 rounded-lg px-4 min-h-[72px] py-2 justify-between cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+<div class="flex items-center gap-4">
+<img class="rounded-full h-12 w-12 object-cover" data-alt="Photo of Élodie Dubois" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDjBjUWnPkJpmB1MeGYH5Ks0L28w64CDXzjxdwdQJFIwXG1o8-1X3fnNstUadR3jJ_QP9Hy_7qRf38E0bR3yOCSBPqiq-XhChnBrS9K210NDBIm1IMtmDmWdSCigMyQAceIC5uIK9Rfn5jVhxPCPuakddj4tZS5p3rMhHjMbksfRJyQw-wxXVtrahiuXdAVTphNsfaFbmquek4YY8B1MmZRrBCiv_lDEFS6vBQIx1Yd2BILZN4O9H98e4f1GWFquVwwbtCpg1bXper"/>
+<div class="flex flex-col justify-center">
+<p class="text-gray-900 dark:text-gray-100 text-base font-medium leading-normal line-clamp-1">Élodie Dubois</p>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal line-clamp-2">Moyenne: <span class="font-semibold text-orange-600 dark:text-orange-400">16/20</span></p>
+</div>
+</div>
+<div class="shrink-0">
+<div class="text-gray-400 dark:text-gray-500 flex size-7 items-center justify-center">
+<span class="material-symbols-outlined">chevron_right</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-white dark:bg-gray-800/50 rounded-lg px-4 min-h-[72px] py-2 justify-between cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+<div class="flex items-center gap-4">
+<img class="rounded-full h-12 w-12 object-cover" data-alt="Photo of Lucas Fournier" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhEY0t-EN2OSrm2xrAoFDiikCiPTAczqvD1vrtQ93FcFqS2LFWle_k_4kykbqS9c4nLDQgK1yzrKzDrVGCCuqsuNlmNwz8lh0v5ssJT0lUsVN9YzONJRW6YQp2jPpJ4gZkQhhNew5ZNXC1j_Yd3Q_pZd1DEtrANwy0neHarLeJYiaafxtraun3a4CNocmojU8oCchIeWEiIZN-g62MtITD_rpsEdTU5gcA__F89GOtwU58BFsvCYxau2b_00IwCjETmUO2u5ls_dYG"/>
+<div class="flex flex-col justify-center">
+<p class="text-gray-900 dark:text-gray-100 text-base font-medium leading-normal line-clamp-1">Lucas Fournier</p>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal line-clamp-2">Moyenne: <span class="font-semibold text-yellow-600 dark:text-yellow-400">14/20</span></p>
+</div>
+</div>
+<div class="shrink-0">
+<div class="text-gray-400 dark:text-gray-500 flex size-7 items-center justify-center">
+<span class="material-symbols-outlined">chevron_right</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="relative flex min-h-screen w-full flex-col bg-background-light dark:bg-background-dark mt-8 border-t-4 border-dashed border-primary/50" id="student-detail-screen">
+<div class="sticky top-0 z-10 bg-background-light dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="flex items-center p-4 pb-2 justify-between">
+<button class="text-gray-800 dark:text-gray-200 flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-gray-200 dark:hover:bg-gray-700">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="text-gray-900 dark:text-gray-100 text-lg font-bold leading-tight tracking-tight flex-1 text-center">Chloé Garnier</h1>
+<div class="size-10 shrink-0"></div> 
+</div>
+</div>
+<div class="px-4 pt-2">
+<div class="flex items-center justify-between">
+<h2 class="text-base font-semibold text-gray-800 dark:text-gray-200">Évolution des cotes</h2>
+<button class="flex items-center gap-1.5 rounded-full bg-white dark:bg-gray-800/50 px-3 py-1.5 text-sm font-medium text-gray-700 dark:text-gray-300 shadow-sm border border-gray-200 dark:border-gray-700">
+<span class="material-symbols-outlined !text-lg">calendar_today</span>
+<span>Ce semestre</span>
+<span class="material-symbols-outlined !text-lg">expand_more</span>
+</button>
+</div>
+</div>
+<div class="p-4">
+<div class="w-full rounded-xl bg-white dark:bg-gray-800/50 p-4 shadow-sm">
+<div class="aspect-[4/3] w-full bg-gray-100 dark:bg-gray-700/50 rounded-lg flex items-center justify-center">
+<img alt="A line chart showing grade evolution over several sessions." class="w-full h-full object-cover rounded-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmXgikPQU-hZyshnqmIKoLfkp_DqEXolyHNy1lS1lfDTKHRdL-7OTOXfDjv7Nq3e1HmTZXK9joLdaPcCZwZAs_uclyrJ4sTsDDwPLAAFw1oF2uj56C3tETQ-L_-oiGTylknja_Itg0YBhc-GOpBXDr4T-YfuKYjV2bUnQMTZplaTzZ_p3XgSLLwdoQy3s1XtsSP39YJhUKUxWCPPj7ATJzKM2e4xaVXTyH-sLz2ycpPfFqUKiP6I9D8THyX7NCwISmgCJbPbSEz0sV"/>
+</div>
+</div>
+</div>
+<div class="px-4">
+<div class="flex w-full rounded-xl bg-gray-200/60 dark:bg-gray-800/80 p-1">
+<button class="flex-1 rounded-lg bg-white dark:bg-gray-900 py-2 text-sm font-semibold text-primary shadow-sm">Graphique</button>
+<button class="flex-1 rounded-lg py-2 text-sm font-medium text-gray-600 dark:text-gray-400">Liste Détaillée</button>
+</div>
+</div>
+<div class="px-4 mt-6">
+<div class="flex items-center justify-between mb-2">
+<h2 class="text-base font-semibold text-gray-800 dark:text-gray-200">Historique Détaillé</h2>
+<p class="text-sm font-medium text-gray-600 dark:text-gray-400">Moyenne: <span class="font-bold text-green-600 dark:text-green-400">18/20</span></p>
+</div>
+<div class="flex flex-col space-y-3">
+<div class="flex items-center justify-between rounded-lg bg-white dark:bg-gray-800/50 p-3 shadow-sm">
+<div>
+<p class="font-medium text-gray-800 dark:text-gray-200">TP 5: Spectrophotométrie</p>
+<p class="text-xs text-gray-500 dark:text-gray-400">22 Nov. 2023</p>
+</div>
+<p class="text-lg font-bold text-green-600 dark:text-green-400">19/20</p>
+</div>
+<div class="flex items-center justify-between rounded-lg bg-white dark:bg-gray-800/50 p-3 shadow-sm">
+<div>
+<p class="font-medium text-gray-800 dark:text-gray-200">TP 4: Cinétique Chimique</p>
+<p class="text-xs text-gray-500 dark:text-gray-400">08 Nov. 2023</p>
+</div>
+<p class="text-lg font-bold text-orange-600 dark:text-orange-400">17/20</p>
+</div>
+<div class="flex items-center justify-between rounded-lg bg-white dark:bg-gray-800/50 p-3 shadow-sm">
+<div>
+<p class="font-medium text-gray-800 dark:text-gray-200">TP 3: Titrage Acido-Basique</p>
+<p class="text-xs text-gray-500 dark:text-gray-400">15 Oct. 2023</p>
+</div>
+<p class="text-lg font-bold text-green-600 dark:text-green-400">18/20</p>
+</div>
+</div>
+</div>
+<div class="p-4 mt-6 hidden">
+<div class="flex flex-col items-center justify-center text-center p-8 bg-white dark:bg-gray-800/50 rounded-xl shadow-sm">
+<span class="material-symbols-outlined text-5xl text-gray-400 dark:text-gray-500">folder_off</span>
+<p class="mt-4 font-semibold text-gray-700 dark:text-gray-300">Aucune cote enregistrée</p>
+<p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Les cotes de cet élève apparaîtront ici une fois enregistrées.</p>
+</div>
+</div>
+<div class="h-10"></div>
+</div>
+</div>
+
+</body></html>

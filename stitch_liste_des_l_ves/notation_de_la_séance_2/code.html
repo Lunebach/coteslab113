@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Notation Laboratoire</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#4A90E2", // Academic Blue
+              "background-light": "#F8F9FA",
+              "background-dark": "#101922",
+              "grade-i": "#D0021B", // Red
+              "grade-s": "#F5A623", // Orange
+              "grade-b": "#7ED321", // Light Green
+              "grade-tb": "#417505", // Dark Green
+              "grade-e": "#9013FE", // Purple
+            },
+            fontFamily: {
+              "display": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+      }
+      .grade-button.active {
+        color: white;
+      }
+      .grade-button.active.bg-grade-i { background-color: #D0021B; }
+      .grade-button.active.bg-grade-s { background-color: #F5A623; }
+      .grade-button.active.bg-grade-b { background-color: #7ED321; }
+      .grade-button.active.bg-grade-tb { background-color: #417505; }
+      .grade-button.active.bg-grade-e { background-color: #9013FE; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<!-- Header -->
+<div class="sticky top-0 z-10 flex items-center justify-between border-b border-gray-200/80 bg-background-light/80 p-4 pb-3 backdrop-blur-sm dark:border-gray-800/80 dark:bg-background-dark/80">
+<button class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-gray-700 dark:text-gray-300">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</button>
+<h1 class="flex-1 text-center text-lg font-bold text-gray-900 dark:text-white">TP Chimie - Groupe A</h1>
+<div class="flex w-10 shrink-0 items-center justify-end">
+<button class="flex h-10 w-10 items-center justify-center rounded-full text-gray-700 dark:text-gray-300">
+<span class="material-symbols-outlined text-2xl">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Main Content: Student List -->
+<main class="flex-grow px-4 pt-4 pb-28">
+<div class="flex flex-col gap-4">
+<!-- Student Row 1 -->
+<div class="flex flex-col gap-3 rounded-xl bg-white p-4 shadow-sm dark:bg-gray-800/50">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<p class="text-base font-semibold text-gray-900 dark:text-white">Jean Dupont</p>
+<span class="flex h-6 w-6 items-center justify-center rounded-full bg-primary/20 text-xs font-bold text-primary dark:bg-primary/30 dark:text-white">3</span>
+</div>
+</div>
+<div class="grid grid-cols-5 gap-2">
+<button class="grade-button bg-grade-i active flex h-10 flex-1 items-center justify-center rounded-lg border border-gray-200 text-sm font-bold transition-all dark:border-gray-700">I</button>
+<button class="grade-button bg-gray-100 dark:bg-gray-700 flex h-10 flex-1 items-center justify-center rounded-lg border border-gray-200 text-sm font-bold text-gray-500 transition-all dark:border-gray-700 dark:text-gray-400">S</button>
+<button class="grade-button bg-gray-100 dark:bg-gray-700 flex h-10 flex-1 items-center justify-center rounded-lg border border-gray-200 text-sm font-bold text-gray-500 transition-all dark:border-gray-700 dark:text-gray-400">B</button>
+<button class="grade-button bg-gray-100 dark:bg-gray-700 flex h-10 flex-1 items-center justify-center rounded-lg border border-gray-200 text-sm font-bold text-gray-500 transition-all dark:border-gray-700 dark:text-gray-400">TB</button>
+<button class="grade-button bg-gray-100 dark:bg-gray-700 flex h-10 flex-1 items-center justify-center rounded-lg border border-gray-200 text-sm font-bold text-gray-500 transition-all dark:border-gray-700 dark:text-gray-400">E</button>
+</div>
+</div>
+<!-- Student Row 2 -->
+<div class="flex flex-col gap-3 rounded-xl bg-white p-4 shadow-sm dark:bg-gray-800/50">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<p class="text-base font-semibold text-gray-900 dark:text-white">Marie Curie</p>
+<span class="flex h-6 w-6 items-center justify-center rounded-full bg-primary/20 text-xs font-bold text-primary dark:bg-primary/30 dark:text-white">5</span>
+</div>
+</div>
+<div class="grid grid-cols-5 gap-2">
+<button class="grade-button bg-gray-100 dark:bg-gray-700 flex h-10 flex-1 items-center justify-center rounded-lg border border-gray-200 text-sm font-bold text-gray-500 transition-all dark:border-gray-700 dark:text-gray-400">I</button>
+<button class="grade-button bg-gray-100 dark:bg-gray-700 flex h-10 flex-1 items-center justify-center rounded-lg border border-gray-200 text-sm font-bold text-gray-500 transition-all dark:border-gray-700 dark:text-gray-400">S</button>
+<button class="grade-button bg-gray-100 dark:bg-gray-700 flex h-10 flex-1 items-center justify-center rounded-lg border border-gray-200 text-sm font-bold text-gray-500 transition-all dark:border-gray-700 dark:text-gray-400">B</button>
+<button class="grade-button bg-grade-tb active flex h-10 flex-1 items-center justify-center rounded-lg border border-gray-200 text-sm font-bold transition-all dark:border-gray-700">TB</button>
+<button class="grade-button bg-gray-100 dark:bg-gray-700 flex h-10 flex-1 items-center justify-center rounded-lg border border-gray-200 text-sm font-bold text-gray-500 transition-all dark:border-gray-700 dark:text-gray-400">E</button>
+</div>
+</div>
+<!-- Student Row 3 -->
+<div class="flex flex-col gap-3 rounded-xl bg-white p-4 opacity-60 shadow-sm dark:bg-gray-800/50">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<p class="text-base font-semibold text-gray-900 dark:text-white">Louis Pasteur</p>
+<span class="flex h-6 w-6 items-center justify-center rounded-full bg-gray-200 text-xs font-bold text-gray-600 dark:bg-gray-700 dark:text-gray-300">0</span>
+</div>
+</div>
+<div class="grid grid-cols-5 gap-2">
+<button class="grade-button bg-gray-100 dark:bg-gray-700 flex h-10 flex-1 items-center justify-center rounded-lg border border-gray-200 text-sm font-bold text-gray-500 transition-all dark:border-gray-700 dark:text-gray-400">I</button>
+<button class="grade-button bg-gray-100 dark:bg-gray-700 flex h-10 flex-1 items-center justify-center rounded-lg border border-gray-200 text-sm font-bold text-gray-500 transition-all dark:border-gray-700 dark:text-gray-400">S</button>
+<button class="grade-button bg-gray-100 dark:bg-gray-700 flex h-10 flex-1 items-center justify-center rounded-lg border border-gray-200 text-sm font-bold text-gray-500 transition-all dark:border-gray-700 dark:text-gray-400">B</button>
+<button class="grade-button bg-gray-100 dark:bg-gray-700 flex h-10 flex-1 items-center justify-center rounded-lg border border-gray-200 text-sm font-bold text-gray-500 transition-all dark:border-gray-700 dark:text-gray-400">TB</button>
+<button class="grade-button bg-gray-100 dark:bg-gray-700 flex h-10 flex-1 items-center justify-center rounded-lg border border-gray-200 text-sm font-bold text-gray-500 transition-all dark:border-gray-700 dark:text-gray-400">E</button>
+</div>
+</div>
+<!-- Student Row 4 -->
+<div class="flex flex-col gap-3 rounded-xl bg-white p-4 shadow-sm dark:bg-gray-800/50">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<p class="text-base font-semibold text-gray-900 dark:text-white">Albert Einstein</p>
+<span class="flex h-6 w-6 items-center justify-center rounded-full bg-primary/20 text-xs font-bold text-primary dark:bg-primary/30 dark:text-white">2</span>
+</div>
+</div>
+<div class="grid grid-cols-5 gap-2">
+<button class="grade-button bg-gray-100 dark:bg-gray-700 flex h-10 flex-1 items-center justify-center rounded-lg border border-gray-200 text-sm font-bold text-gray-500 transition-all dark:border-gray-700 dark:text-gray-400">I</button>
+<button class="grade-button bg-gray-100 dark:bg-gray-700 flex h-10 flex-1 items-center justify-center rounded-lg border border-gray-200 text-sm font-bold text-gray-500 transition-all dark:border-gray-700 dark:text-gray-400">S</button>
+<button class="grade-button bg-grade-b active flex h-10 flex-1 items-center justify-center rounded-lg border border-gray-200 text-sm font-bold transition-all dark:border-gray-700">B</button>
+<button class="grade-button bg-gray-100 dark:bg-gray-700 flex h-10 flex-1 items-center justify-center rounded-lg border border-gray-200 text-sm font-bold text-gray-500 transition-all dark:border-gray-700 dark:text-gray-400">TB</button>
+<button class="grade-button bg-gray-100 dark:bg-gray-700 flex h-10 flex-1 items-center justify-center rounded-lg border border-gray-200 text-sm font-bold text-gray-500 transition-all dark:border-gray-700 dark:text-gray-400">E</button>
+</div>
+</div>
+<!-- Student Row 5 -->
+<div class="flex flex-col gap-3 rounded-xl bg-white p-4 opacity-60 shadow-sm dark:bg-gray-800/50">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<p class="text-base font-semibold text-gray-900 dark:text-white">Rosalind Franklin</p>
+<span class="flex h-6 w-6 items-center justify-center rounded-full bg-gray-200 text-xs font-bold text-gray-600 dark:bg-gray-700 dark:text-gray-300">0</span>
+</div>
+</div>
+<div class="grid grid-cols-5 gap-2">
+<button class="grade-button bg-gray-100 dark:bg-gray-700 flex h-10 flex-1 items-center justify-center rounded-lg border border-gray-200 text-sm font-bold text-gray-500 transition-all dark:border-gray-700 dark:text-gray-400">I</button>
+<button class="grade-button bg-gray-100 dark:bg-gray-700 flex h-10 flex-1 items-center justify-center rounded-lg border border-gray-200 text-sm font-bold text-gray-500 transition-all dark:border-gray-700 dark:text-gray-400">S</button>
+<button class="grade-button bg-gray-100 dark:bg-gray-700 flex h-10 flex-1 items-center justify-center rounded-lg border border-gray-200 text-sm font-bold text-gray-500 transition-all dark:border-gray-700 dark:text-gray-400">B</button>
+<button class="grade-button bg-gray-100 dark:bg-gray-700 flex h-10 flex-1 items-center justify-center rounded-lg border border-gray-200 text-sm font-bold text-gray-500 transition-all dark:border-gray-700 dark:text-gray-400">TB</button>
+<button class="grade-button bg-gray-100 dark:bg-gray-700 flex h-10 flex-1 items-center justify-center rounded-lg border border-gray-200 text-sm font-bold text-gray-500 transition-all dark:border-gray-700 dark:text-gray-400">E</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Sticky Footer / FAB -->
+<footer class="fixed bottom-0 left-0 w-full bg-background-light/80 p-4 backdrop-blur-sm dark:bg-background-dark/80">
+<button class="flex w-full items-center justify-center rounded-xl bg-primary py-4 text-base font-bold text-white shadow-lg shadow-primary/30 transition-transform active:scale-95">Valider la séance</button>
+</footer>
+</div>
+</body></html>

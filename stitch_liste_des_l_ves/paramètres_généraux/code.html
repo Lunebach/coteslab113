@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Paramètres de l'Application</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#1173d4",
+            "background-light": "#f6f7f8",
+            "background-dark": "#101922",
+          },
+          fontFamily: {
+            "display": ["Manrope", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative mx-auto flex h-auto min-h-screen w-full max-w-lg flex-col bg-background-light dark:bg-background-dark group/design-root" style='font-family: Manrope, "Noto Sans", sans-serif;'>
+<!-- Top App Bar -->
+<header class="sticky top-0 z-10 flex items-center bg-background-light/80 dark:bg-background-dark/80 p-4 pb-2 backdrop-blur-sm">
+<div class="text-[#111418] dark:text-white flex size-12 shrink-0 items-center justify-start">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</div>
+<h1 class="text-[#111418] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-12">Paramètres</h1>
+</header>
+<main class="flex-1 px-4 pt-4 pb-8">
+<!-- Section: Préférences Générales -->
+<div>
+<h2 class="text-[#64748b] dark:text-[#94a3b8] text-sm font-bold uppercase tracking-wide px-4 pb-2 pt-4">Préférences Générales</h2>
+<div class="flex flex-col overflow-hidden rounded-xl bg-white dark:bg-[#1e293b]">
+<!-- List Item: Notifications -->
+<div class="flex items-center gap-4 px-4 min-h-16 justify-between border-b border-background-light dark:border-background-dark">
+<div class="flex items-center gap-4">
+<div class="text-[#111418] dark:text-white flex items-center justify-center rounded-lg bg-background-light dark:bg-background-dark shrink-0 size-10">
+<span class="material-symbols-outlined">notifications</span>
+</div>
+<p class="text-[#111418] dark:text-white text-base font-normal leading-normal flex-1 truncate">Notifications</p>
+</div>
+<div class="shrink-0">
+<label class="relative flex h-[31px] w-[51px] cursor-pointer items-center rounded-full border-none bg-background-light dark:bg-background-dark p-0.5 has-[:checked]:justify-end has-[:checked]:bg-primary">
+<input checked="" class="invisible absolute" type="checkbox"/>
+<div class="h-full w-[27px] rounded-full bg-white transition-transform" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 8px, rgba(0, 0, 0, 0.04) 0px 3px 1px;"></div>
+</label>
+</div>
+</div>
+<!-- List Item: Thème sombre -->
+<div class="flex items-center gap-4 px-4 min-h-16 justify-between">
+<div class="flex items-center gap-4">
+<div class="text-[#111418] dark:text-white flex items-center justify-center rounded-lg bg-background-light dark:bg-background-dark shrink-0 size-10">
+<span class="material-symbols-outlined">dark_mode</span>
+</div>
+<p class="text-[#111418] dark:text-white text-base font-normal leading-normal flex-1 truncate">Thème sombre</p>
+</div>
+<div class="shrink-0">
+<label class="relative flex h-[31px] w-[51px] cursor-pointer items-center rounded-full border-none bg-background-light dark:bg-background-dark p-0.5 has-[:checked]:justify-end has-[:checked]:bg-primary">
+<input class="invisible absolute" type="checkbox"/>
+<div class="h-full w-[27px] rounded-full bg-white transition-transform" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 8px, rgba(0, 0, 0, 0.04) 0px 3px 1px;"></div>
+</label>
+</div>
+</div>
+</div>
+</div>
+<!-- Section: Gestion des Données -->
+<div class="mt-6">
+<h2 class="text-[#64748b] dark:text-[#94a3b8] text-sm font-bold uppercase tracking-wide px-4 pb-2 pt-4">Gestion des Données</h2>
+<div class="flex flex-col gap-4">
+<button class="flex items-center justify-center gap-3 rounded-xl bg-white dark:bg-[#1e293b] p-4 text-base font-semibold text-primary transition-colors hover:bg-primary/10 dark:hover:bg-primary/20">
+<span class="material-symbols-outlined">cloud_upload</span>
+            Sauvegarder les données
+          </button>
+<button class="flex items-center justify-center gap-3 rounded-xl bg-white dark:bg-[#1e293b] p-4 text-base font-semibold text-primary transition-colors hover:bg-primary/10 dark:hover:bg-primary/20">
+<span class="material-symbols-outlined">cloud_download</span>
+            Restaurer les données
+          </button>
+</div>
+<p class="mt-3 text-center text-xs text-slate-500 dark:text-slate-400">Dernière sauvegarde : 15 juillet 2024 à 10:32</p>
+</div>
+<!-- Section: Support -->
+<div class="mt-6">
+<h2 class="text-[#64748b] dark:text-[#94a3b8] text-sm font-bold uppercase tracking-wide px-4 pb-2 pt-4">Support</h2>
+<div class="flex flex-col overflow-hidden rounded-xl bg-white dark:bg-[#1e293b]">
+<!-- List Item: Aide et FAQ -->
+<div class="flex items-center gap-4 px-4 min-h-16 justify-between border-b border-background-light dark:border-background-dark">
+<div class="flex flex-1 items-center gap-4">
+<div class="text-[#111418] dark:text-white flex items-center justify-center rounded-lg bg-background-light dark:bg-background-dark shrink-0 size-10">
+<span class="material-symbols-outlined">help_outline</span>
+</div>
+<p class="text-[#111418] dark:text-white text-base font-normal leading-normal">Aide et FAQ</p>
+</div>
+<div class="shrink-0 text-[#94a3b8]">
+<span class="material-symbols-outlined">chevron_right</span>
+</div>
+</div>
+<!-- List Item: Nous contacter -->
+<div class="flex items-center gap-4 px-4 min-h-16 justify-between">
+<div class="flex flex-1 items-center gap-4">
+<div class="text-[#111418] dark:text-white flex items-center justify-center rounded-lg bg-background-light dark:bg-background-dark shrink-0 size-10">
+<span class="material-symbols-outlined">mail_outline</span>
+</div>
+<p class="text-[#111418] dark:text-white text-base font-normal leading-normal">Nous contacter</p>
+</div>
+<div class="shrink-0 text-[#94a3b8]">
+<span class="material-symbols-outlined">chevron_right</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Section: À Propos -->
+<div class="mt-6">
+<h2 class="text-[#64748b] dark:text-[#94a3b8] text-sm font-bold uppercase tracking-wide px-4 pb-2 pt-4">À Propos</h2>
+<div class="flex flex-col overflow-hidden rounded-xl bg-white dark:bg-[#1e293b]">
+<!-- List Item: Version -->
+<div class="flex items-center gap-4 px-4 min-h-16 justify-between border-b border-background-light dark:border-background-dark">
+<div class="flex flex-1 items-center gap-4">
+<div class="text-[#111418] dark:text-white flex items-center justify-center rounded-lg bg-background-light dark:bg-background-dark shrink-0 size-10">
+<span class="material-symbols-outlined">help_outline</span>
+</div>
+<p class="text-[#111418] dark:text-white text-base font-normal leading-normal">Version de l'application</p>
+</div>
+<p class="shrink-0 text-slate-500 dark:text-slate-400 text-base">1.2.5</p>
+</div>
+<!-- List Item: Mentions Légales -->
+<div class="flex items-center gap-4 px-4 min-h-16 justify-between">
+<div class="flex flex-1 items-center gap-4">
+<div class="text-[#111418] dark:text-white flex items-center justify-center rounded-lg bg-background-light dark:bg-background-dark shrink-0 size-10">
+<span class="material-symbols-outlined">gavel</span>
+</div>
+<p class="text-[#111418] dark:text-white text-base font-normal leading-normal">Mentions légales</p>
+</div>
+<div class="shrink-0 text-[#94a3b8]">
+<span class="material-symbols-outlined">chevron_right</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

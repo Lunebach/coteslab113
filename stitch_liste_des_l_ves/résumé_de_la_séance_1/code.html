@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Résumé des cotes</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#005A9C",
+            "background-light": "#F0F2F5",
+            "background-dark": "#101922",
+            "card-light": "#ffffff",
+            "card-dark": "#1d2a39",
+            "text-light-primary": "#1D2129",
+            "text-dark-primary": "#f0f2f5",
+            "text-light-secondary": "#617589",
+            "text-dark-secondary": "#a0b0c1",
+            "border-light": "#e5e7eb",
+            "border-dark": "#374151"
+          },
+          fontFamily: {
+            "display": ["Manrope", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.5rem",
+            "lg": "0.75rem",
+            "xl": "1rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-10 flex flex-col bg-card-light dark:bg-card-dark border-b border-border-light dark:border-border-dark shadow-sm">
+<div class="flex items-center p-4">
+<button class="text-text-light-primary dark:text-text-dark-primary flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</button>
+<h1 class="text-text-light-primary dark:text-text-dark-primary text-xl font-bold leading-tight tracking-tight text-center flex-1 pr-10">Résumé: Labo - 15/10/2024</h1>
+</div>
+</header>
+<main class="flex-1 px-4 py-6">
+<!-- Search Bar -->
+<div class="mb-6">
+<label class="flex flex-col min-w-40 h-12 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full bg-card-light dark:bg-card-dark border border-border-light dark:border-border-dark focus-within:ring-2 focus-within:ring-primary focus-within:ring-offset-2 focus-within:ring-offset-background-light dark:focus-within:ring-offset-background-dark transition-all">
+<div class="text-text-light-secondary dark:text-text-dark-secondary flex items-center justify-center pl-4">
+<span class="material-symbols-outlined text-2xl">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-lg text-text-light-primary dark:text-text-dark-primary focus:outline-0 focus:ring-0 border-none bg-transparent h-full placeholder:text-text-light-secondary dark:placeholder:text-text-dark-secondary pl-2 text-base font-normal leading-normal" placeholder="Rechercher un élève" value=""/>
+</div>
+</label>
+</div>
+<!-- Summary Table -->
+<div class="flex flex-col gap-3 rounded-lg bg-card-light dark:bg-card-dark p-4 border border-border-light dark:border-border-dark shadow-sm">
+<!-- Table Header -->
+<div class="flex items-center gap-4 px-4 min-h-14 justify-between border-b border-border-light dark:border-border-dark pb-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-text-light-secondary dark:text-text-dark-secondary text-xl">sort_by_alpha</span>
+<button class="text-text-light-secondary dark:text-text-dark-secondary text-sm font-semibold uppercase tracking-wider">Élève</button>
+</div>
+<button class="flex items-center gap-1 shrink-0 text-sm font-semibold uppercase tracking-wider text-primary">
+            Cote Globale
+            <span class="material-symbols-outlined text-xl">arrow_downward</span>
+</button>
+</div>
+<!-- Student List -->
+<div class="flex flex-col divide-y divide-border-light dark:divide-border-dark">
+<div class="flex items-center gap-4 px-4 py-3 justify-between hover:bg-black/5 dark:hover:bg-white/5 -mx-4 rounded-lg cursor-pointer transition-colors">
+<div class="flex items-center gap-4">
+<div class="relative">
+<img class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-10 w-10" data-alt="Profile picture of Amélie Dupont" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGhPZKxtKj_7s6bW8IJEievNk2007-YOumR4J7DEh496Srlg9TADoa7A536jQTvwEUFmJg09VrlJ5dQ8gZo1vE9wfLeZGn19I6v9Mm5AaddBwjGDGc1tfdyd6SjUTNMuQXI4P6Sz_2aBvuet6vjcBa5xsqZQvSC16xL-tvUz-0sFAvKaEzlX9DYZNo1WDtv7qKtz4k9jLc9SImaPsSoCeoGJ4vLuIOcLEl8VHsrt5PIDlrH7roXgWc3YADbc-fZJ24OkGMuU5RidkH"/>
+<span class="absolute bottom-0 right-0 block h-3 w-3 rounded-full bg-green-500 ring-2 ring-card-light dark:ring-card-dark" data-alt="High score indicator"></span>
+</div>
+<p class="text-text-light-primary dark:text-text-dark-primary text-base font-medium leading-normal flex-1 truncate">Amélie Dupont</p>
+</div>
+<div class="shrink-0">
+<p class="text-text-light-primary dark:text-text-dark-primary text-base font-semibold leading-normal">18/20</p>
+</div>
+</div>
+<div class="flex items-center gap-4 px-4 py-3 justify-between hover:bg-black/5 dark:hover:bg-white/5 -mx-4 rounded-lg cursor-pointer transition-colors">
+<div class="flex items-center gap-4">
+<div class="relative">
+<img class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-10 w-10" data-alt="Profile picture of Benoît Martin" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYm92OxmNqdFhMewSOlNzi8bLVz8jpYtpsu07I6Nh5brWHo5oxouq3br28ztFdcUz-gh9pJ7VeDdpSF-xIJnubAQPlvT1m5Rypb1Ey1QR2Rrv6g-roUaiuqKapUlfdIVwteJN0EIXS-yVopOZg5BT7rW-g-E3mlAr2JVhwmLqnNqNG8nns2hnhJ9wisTbIqeUkOdyrHRCBsyafKxasEZGVwKafUEahlecN4MfgdW9bpR1heessvlqJ9FruglP3s_BEAzYEEa0BWefn"/>
+<span class="absolute bottom-0 right-0 block h-3 w-3 rounded-full bg-yellow-500 ring-2 ring-card-light dark:ring-card-dark" data-alt="Average score indicator"></span>
+</div>
+<p class="text-text-light-primary dark:text-text-dark-primary text-base font-medium leading-normal flex-1 truncate">Benoît Martin</p>
+</div>
+<div class="shrink-0">
+<p class="text-text-light-primary dark:text-text-dark-primary text-base font-semibold leading-normal">15/20</p>
+</div>
+</div>
+<div class="flex items-center gap-4 px-4 py-3 justify-between hover:bg-black/5 dark:hover:bg-white/5 -mx-4 rounded-lg cursor-pointer transition-colors">
+<div class="flex items-center gap-4">
+<div class="relative">
+<img class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-10 w-10" data-alt="Profile picture of Chloé Dubois" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB75MDv8OrgcAFv-PjnkgDeWB80PV2frOOO40tuCL3ThvbjqBUvemUGtQ2-2wLGk0tDpDlO5AALhPOpfUtESOjjfRviBryDjsCKpBCQSP62otZ999rZOtPhEnhpkpmfcDjBc_W9E6VNNhn7BYb8t-Hhn20LITFEZ1SPM9cOh4ykRr1pCTHRuoieoogxJt1QFcwhMaU29WIJU-rXgnkh4LUM5KuIc6izrmirdV1CuVAtIuQLAw6lBiZBi7yCxPCbnZYPmbYaHHVybm42"/>
+<span class="absolute bottom-0 right-0 block h-3 w-3 rounded-full bg-green-500 ring-2 ring-card-light dark:ring-card-dark" data-alt="High score indicator"></span>
+</div>
+<p class="text-text-light-primary dark:text-text-dark-primary text-base font-medium leading-normal flex-1 truncate">Chloé Dubois</p>
+</div>
+<div class="shrink-0">
+<p class="text-text-light-primary dark:text-text-dark-primary text-base font-semibold leading-normal">19/20</p>
+</div>
+</div>
+<div class="flex items-center gap-4 px-4 py-3 justify-between hover:bg-black/5 dark:hover:bg-white/5 -mx-4 rounded-lg cursor-pointer transition-colors">
+<div class="flex items-center gap-4">
+<div class="relative">
+<img class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-10 w-10" data-alt="Profile picture of David Lefevre" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsU3KU7Ycjqd6CdxjZMUamlwxSGca42jCWMnXFyVEO-0wQ2zon_HwFIX610P-kus3BpqIQ-sFSDqPTAuCF8z5_jPEKJYcA1o9fgVmg08LVkTfXdB1Ho_F_FzT8QCAQQKVKb0GcgKJcg22ot6PnmM5HYlf-RyIp6pva2K4KxFE8c1M1Fp8IbZpJhtrJLbZFCK7ly51Vcu0IqgBuEZruo4ZjztXmHIwULQZ-Te_UHm61mdaURZvDoDo0KCwlCIy9Oi0yCFl4hvAKPUMN"/>
+<span class="absolute bottom-0 right-0 block h-3 w-3 rounded-full bg-red-500 ring-2 ring-card-light dark:ring-card-dark" data-alt="Low score indicator"></span>
+</div>
+<p class="text-text-light-primary dark:text-text-dark-primary text-base font-medium leading-normal flex-1 truncate">David Lefevre</p>
+</div>
+<div class="shrink-0">
+<p class="text-text-light-primary dark:text-text-dark-primary text-base font-semibold leading-normal">9/20</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Floating Action Button -->
+<div class="fixed bottom-6 right-6">
+<button class="flex items-center justify-center gap-2 h-14 w-14 rounded-full bg-primary text-white shadow-lg hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background-light dark:focus:ring-offset-background-dark transition-all duration-300 group">
+<span class="material-symbols-outlined text-2xl">ios_share</span>
+<!-- <span class="max-w-0 overflow-hidden whitespace-nowrap transition-all duration-300 group-hover:max-w-xs group-hover:pl-1">Exporter</span> -->
+</button>
+</div>
+</div>
+</body></html>

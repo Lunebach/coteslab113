@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Personnaliser le barème</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#1173d4",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101922",
+            },
+            fontFamily: {
+              "display": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            font-size: 24px;
+        }
+        /* Custom styles for number input to hide arrows on all browsers */
+        input[type='number']::-webkit-inner-spin-button,
+        input[type='number']::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        input[type='number'] {
+            -moz-appearance: textfield;
+            appearance: textfield;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-200">
+<div class="relative flex min-h-screen w-full flex-col">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-10 flex h-16 items-center border-b border-slate-200/80 bg-background-light/80 px-4 backdrop-blur-sm dark:border-slate-800/80 dark:bg-background-dark/80">
+<button class="flex h-10 w-10 items-center justify-center rounded-full text-slate-700 hover:bg-slate-200 dark:text-slate-300 dark:hover:bg-slate-800">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="flex-1 text-center text-lg font-bold text-slate-900 dark:text-slate-100">Personnaliser le barème</h1>
+<button class="flex h-10 w-10 items-center justify-center rounded-full text-slate-700 hover:bg-slate-200 dark:text-slate-300 dark:hover:bg-slate-800">
+<span class="material-symbols-outlined">restart_alt</span>
+</button>
+</header>
+<!-- Main Content -->
+<main class="flex-1 px-4 pt-6 pb-32">
+<p class="mb-6 text-center text-sm text-slate-600 dark:text-slate-400">Modifiez les points pour chaque cote ou ajoutez de nouveaux niveaux.</p>
+<!-- Grading Levels List -->
+<div class="space-y-3">
+<!-- List Item E -->
+<div class="flex items-center gap-3 rounded-xl bg-white p-3 shadow-sm dark:bg-slate-900">
+<div class="flex flex-1 items-center gap-3">
+<div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-emerald-100 text-emerald-600 dark:bg-emerald-900/50 dark:text-emerald-400">
+<span class="text-xl font-bold">E</span>
+</div>
+<input class="w-full border-none bg-transparent p-0 text-base font-medium text-slate-800 placeholder-slate-400 focus:ring-0 dark:text-slate-200" type="text" value="Excellent"/>
+</div>
+<div class="flex items-center gap-2 text-slate-800 dark:text-slate-200">
+<button class="flex h-8 w-8 items-center justify-center rounded-full bg-slate-100 text-lg font-medium text-slate-600 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-400 dark:hover:bg-slate-700">-</button>
+<input class="w-8 border-none bg-transparent p-0 text-center text-base font-bold [appearance:textfield] focus:ring-0" type="number" value="5"/>
+<button class="flex h-8 w-8 items-center justify-center rounded-full bg-slate-100 text-lg font-medium text-slate-600 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-400 dark:hover:bg-slate-700">+</button>
+</div>
+<button class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-slate-500 hover:bg-slate-100 hover:text-red-500 dark:hover:bg-slate-800">
+<span class="material-symbols-outlined" style="font-size: 20px;">delete</span>
+</button>
+</div>
+<!-- List Item TB -->
+<div class="flex items-center gap-3 rounded-xl bg-white p-3 shadow-sm dark:bg-slate-900">
+<div class="flex flex-1 items-center gap-3">
+<div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-sky-100 text-sky-600 dark:bg-sky-900/50 dark:text-sky-400">
+<span class="text-xl font-bold">TB</span>
+</div>
+<input class="w-full border-none bg-transparent p-0 text-base font-medium text-slate-800 placeholder-slate-400 focus:ring-0 dark:text-slate-200" type="text" value="Très Bien"/>
+</div>
+<div class="flex items-center gap-2 text-slate-800 dark:text-slate-200">
+<button class="flex h-8 w-8 items-center justify-center rounded-full bg-slate-100 text-lg font-medium text-slate-600 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-400 dark:hover:bg-slate-700">-</button>
+<input class="w-8 border-none bg-transparent p-0 text-center text-base font-bold [appearance:textfield] focus:ring-0" type="number" value="4"/>
+<button class="flex h-8 w-8 items-center justify-center rounded-full bg-slate-100 text-lg font-medium text-slate-600 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-400 dark:hover:bg-slate-700">+</button>
+</div>
+<button class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-slate-500 hover:bg-slate-100 hover:text-red-500 dark:hover:bg-slate-800">
+<span class="material-symbols-outlined" style="font-size: 20px;">delete</span>
+</button>
+</div>
+<!-- List Item B -->
+<div class="flex items-center gap-3 rounded-xl bg-white p-3 shadow-sm dark:bg-slate-900">
+<div class="flex flex-1 items-center gap-3">
+<div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-amber-100 text-amber-600 dark:bg-amber-900/50 dark:text-amber-400">
+<span class="text-xl font-bold">B</span>
+</div>
+<input class="w-full border-none bg-transparent p-0 text-base font-medium text-slate-800 placeholder-slate-400 focus:ring-0 dark:text-slate-200" type="text" value="Bien"/>
+</div>
+<div class="flex items-center gap-2 text-slate-800 dark:text-slate-200">
+<button class="flex h-8 w-8 items-center justify-center rounded-full bg-slate-100 text-lg font-medium text-slate-600 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-400 dark:hover:bg-slate-700">-</button>
+<input class="w-8 border-none bg-transparent p-0 text-center text-base font-bold [appearance:textfield] focus:ring-0" type="number" value="3"/>
+<button class="flex h-8 w-8 items-center justify-center rounded-full bg-slate-100 text-lg font-medium text-slate-600 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-400 dark:hover:bg-slate-700">+</button>
+</div>
+<button class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-slate-500 hover:bg-slate-100 hover:text-red-500 dark:hover:bg-slate-800">
+<span class="material-symbols-outlined" style="font-size: 20px;">delete</span>
+</button>
+</div>
+<!-- List Item S -->
+<div class="flex items-center gap-3 rounded-xl bg-white p-3 shadow-sm dark:bg-slate-900">
+<div class="flex flex-1 items-center gap-3">
+<div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-orange-100 text-orange-600 dark:bg-orange-900/50 dark:text-orange-400">
+<span class="text-xl font-bold">S</span>
+</div>
+<input class="w-full border-none bg-transparent p-0 text-base font-medium text-slate-800 placeholder-slate-400 focus:ring-0 dark:text-slate-200" type="text" value="Satisfaisant"/>
+</div>
+<div class="flex items-center gap-2 text-slate-800 dark:text-slate-200">
+<button class="flex h-8 w-8 items-center justify-center rounded-full bg-slate-100 text-lg font-medium text-slate-600 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-400 dark:hover:bg-slate-700">-</button>
+<input class="w-8 border-none bg-transparent p-0 text-center text-base font-bold [appearance:textfield] focus:ring-0" type="number" value="2"/>
+<button class="flex h-8 w-8 items-center justify-center rounded-full bg-slate-100 text-lg font-medium text-slate-600 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-400 dark:hover:bg-slate-700">+</button>
+</div>
+<button class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-slate-500 hover:bg-slate-100 hover:text-red-500 dark:hover:bg-slate-800">
+<span class="material-symbols-outlined" style="font-size: 20px;">delete</span>
+</button>
+</div>
+<!-- List Item I -->
+<div class="flex items-center gap-3 rounded-xl bg-white p-3 shadow-sm dark:bg-slate-900">
+<div class="flex flex-1 items-center gap-3">
+<div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-red-100 text-red-600 dark:bg-red-900/50 dark:text-red-400">
+<span class="text-xl font-bold">I</span>
+</div>
+<input class="w-full border-none bg-transparent p-0 text-base font-medium text-slate-800 placeholder-slate-400 focus:ring-0 dark:text-slate-200" type="text" value="Insuffisant"/>
+</div>
+<div class="flex items-center gap-2 text-slate-800 dark:text-slate-200">
+<button class="flex h-8 w-8 items-center justify-center rounded-full bg-slate-100 text-lg font-medium text-slate-600 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-400 dark:hover:bg-slate-700">-</button>
+<input class="w-8 border-none bg-transparent p-0 text-center text-base font-bold [appearance:textfield] focus:ring-0" type="number" value="1"/>
+<button class="flex h-8 w-8 items-center justify-center rounded-full bg-slate-100 text-lg font-medium text-slate-600 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-400 dark:hover:bg-slate-700">+</button>
+</div>
+<button class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-slate-500 hover:bg-slate-100 hover:text-red-500 dark:hover:bg-slate-800">
+<span class="material-symbols-outlined" style="font-size: 20px;">delete</span>
+</button>
+</div>
+</div>
+<!-- Add Level Button -->
+<div class="mt-6">
+<button class="flex w-full items-center justify-center gap-2 rounded-lg border-2 border-dashed border-slate-300 py-3 text-sm font-semibold text-slate-500 hover:border-primary hover:text-primary dark:border-slate-700 dark:text-slate-400 dark:hover:border-primary dark:hover:text-primary">
+<span class="material-symbols-outlined" style="font-size: 20px;">add</span>
+                    Ajouter un niveau
+                </button>
+</div>
+</main>
+<!-- Bottom Action Bar -->
+<footer class="fixed bottom-0 left-0 z-10 w-full bg-background-light/70 p-4 backdrop-blur-sm dark:bg-background-dark/70">
+<button class="h-12 w-full rounded-xl bg-primary text-base font-bold text-white shadow-lg shadow-primary/30">
+                Enregistrer les modifications
+            </button>
+</footer>
+</div>
+</body></html>
